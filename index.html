@@ -314,6 +314,51 @@
   /* ---- services ---- */
   .services { padding-top: 40px; }
 
+  .svc-door {
+    background: var(--peach-soft);
+    border: 1px solid rgba(242,92,10,0.18);
+    border-radius: 22px;
+    padding: 32px 36px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .svc-door .step {
+    flex: none;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: white;
+    background: var(--orange);
+    padding: 8px 16px;
+    border-radius: 100px;
+  }
+
+  .svc-door h3 { font-size: 24px; letter-spacing: -0.01em; margin-bottom: 6px; color: var(--ink); }
+  .svc-door p { font-size: 15px; line-height: 1.6; color: var(--muted); max-width: 640px; }
+
+  .svc-hint {
+    text-align: center;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--muted);
+    margin: 18px 0 20px;
+  }
+  .svc-hint span { color: var(--orange); }
+
+  .svc-card .sub { font-size: 13px; font-weight: 600; margin: -6px 0 14px; }
+  .svc-blue .sub { color: var(--blue-ink); }
+  .svc-fire .sub { color: rgba(255,255,255,0.8); }
+  .svc-peach .sub { color: var(--orange-deep); }
+
+  .svc-card .price { font-size: 12.5px; line-height: 1.5; padding-top: 13px; border-top: 1px dashed; margin-bottom: 16px; }
+  .svc-card .price b { font-weight: 600; }
+  .svc-blue .price { border-color: rgba(35,64,92,0.3); color: #35516F; }
+  .svc-fire .price { border-color: rgba(255,255,255,0.35); color: rgba(255,255,255,0.85); }
+  .svc-peach .price { border-color: rgba(122,61,18,0.25); color: #8A5230; }
+
   .svc-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -340,6 +385,7 @@
     line-height: 1.12;
     letter-spacing: -0.01em;
     margin-bottom: 14px;
+    font-variation-settings: 'opsz' 144;
   }
 
   .svc-card .desc {
@@ -532,6 +578,7 @@
     section { padding: 72px 0; }
     .team-grid { grid-template-columns: 1fr; gap: 48px; }
     .svc-grid { grid-template-columns: 1fr; }
+    .svc-door { flex-direction: column; align-items: flex-start; gap: 16px; padding: 26px 24px; }
     .closing { padding: 84px 0 72px; }
     .footer-inner { padding: 32px 24px; flex-direction: column; text-align: center; }
   }
@@ -635,44 +682,61 @@
   <section class="services" id="services">
     <div class="section-head reveal">
       <span class="eyebrow">Services</span>
-      <h2>Where we can <em>help.</em></h2>
-      <p>Three ways to work with us — from a clear-eyed strategy to a full build to a partner who stays.</p>
+      <h2>One way in. <em>Three ways we help.</em></h2>
+      <p>Not just software handed over — working systems, kept running by real people and powered by AI, built for individuals and small teams.</p>
     </div>
+
+    <div class="svc-door reveal">
+      <span class="step">Step 0 — The way in</span>
+      <div class="door-body">
+        <h3>The Liquid Orange Diagnostic</h3>
+        <p>We audit how you work, find where AI and better systems will actually move the needle, and point you to the right offer below.</p>
+      </div>
+    </div>
+
+    <p class="svc-hint">then we deliver one <span>(or more)</span> of these</p>
+
     <div class="svc-grid stagger">
       <div class="svc-card svc-blue reveal">
-        <span class="lbl">01 — The Solid</span>
-        <h3>AI Strategy &amp; Roadmap</h3>
-        <p class="desc">We map your business honestly and find where AI genuinely earns its keep — then hand you a clear, opinionated plan.</p>
+        <span class="lbl">01 — For individuals</span>
+        <h3>Virtual Assistant System</h3>
+        <p class="sub">QuiteVirtually</p>
+        <p class="desc">Your own AI assistant wired into your email, calendar and tools — plus a trained human who owns the outcome.</p>
         <ul>
-          <li>Discovery workshop</li>
-          <li>AI opportunity audit</li>
-          <li>Priority roadmap</li>
-          <li>Build-ready blueprint</li>
+          <li>AI assistant, wired into your tools</li>
+          <li>A real human on the judgment calls</li>
+          <li>Someone who owns the outcome</li>
+          <li>Your time &amp; attention back</li>
         </ul>
+        <p class="price"><b>Priced as:</b> monthly retainer, with optional custom modules.</p>
         <a class="go" href="#contact">Learn more <span>→</span></a>
       </div>
       <div class="svc-card svc-fire reveal">
-        <span class="lbl">02 — The Fluid</span>
-        <h3>Custom AI Builds</h3>
-        <p class="desc">Apps, automations, internal workflows, Shopify enhancements — designed and refined around how you actually run.</p>
+        <span class="lbl">02 — For small teams</span>
+        <h3>AI Operating System</h3>
+        <p class="sub">The business, in one place</p>
+        <p class="desc">One system that pulls in meetings, tasks, and where every client and project stands — the whole operation, visible and coordinated.</p>
         <ul>
-          <li>Design &amp; build</li>
-          <li>Weekly shipping</li>
-          <li>Real-world testing</li>
-          <li>Confident launch</li>
+          <li>Meetings, tasks &amp; clients in one place</li>
+          <li>See where everything stands</li>
+          <li>Built around how your team runs</li>
+          <li>Coordination &amp; clarity across the team</li>
         </ul>
+        <p class="price"><b>Priced as:</b> setup + monthly retainer, scaling with your team.</p>
         <a class="go" href="#contact">Learn more <span>→</span></a>
       </div>
       <div class="svc-card svc-peach reveal">
-        <span class="lbl">03 — The Execution</span>
-        <h3>Ongoing Partnership</h3>
-        <p class="desc">We stay after launch — watching what matters, optimising as you grow, and building what's next.</p>
+        <span class="lbl">03 — Defined builds</span>
+        <h3>Custom Apps &amp; Internal Tools</h3>
+        <p class="sub">Bespoke builds</p>
+        <p class="desc">A specific app or internal tool designed and built to spec — with the small tools needed to carry the project through.</p>
         <ul>
-          <li>Monthly optimisation</li>
-          <li>New automations</li>
-          <li>Priority support</li>
-          <li>Quarterly reviews</li>
+          <li>Designed &amp; built to spec</li>
+          <li>Web apps &amp; internal tools</li>
+          <li>Milestone-based delivery</li>
+          <li>Optional maintenance tail</li>
         </ul>
+        <p class="price"><b>Priced as:</b> fixed scope, milestone-based — not a subscription.</p>
         <a class="go" href="#contact">Learn more <span>→</span></a>
       </div>
     </div>
